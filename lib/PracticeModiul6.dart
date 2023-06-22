@@ -1,6 +1,3 @@
-import 'dart:html';
-import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,12 +41,9 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-
       body: SingleChildScrollView(
-        child: ListView.separated(
+        child: ListView.builder(
           itemCount: university.length,
-          
           shrinkWrap: true,
           itemBuilder: (context, index) {
             return Column(children: [
@@ -62,9 +56,6 @@ class Homescreen extends StatelessWidget {
                 color: Colors.red,
               ),
             ]);
-          },
-          separatorBuilder: (context, index) {
-            
           },
         ),
       ),
